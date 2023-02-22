@@ -1,0 +1,28 @@
+/*generics*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*utilities*/
+:root{
+    --gray: #DADBD3;
+}
+
+.margin-bt{
+    margin-bottom: 20px;
+}
+
+/*style*/
+body{
+    background-color: var(--gray);
+    height: 100vh;
+}
+
+.header-bg{
+    background-color: #009688;
+    height: 15%;
+    width: 100%;
+}
