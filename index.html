@@ -13,9 +13,73 @@
 </head>
 <body>
     <header class="header-bg"></header>
-    <div id="app" class="container">
-        
+    <div id="app" class="container chat-menu position-absolute top-50 start-50 translate-middle d-flex w-100 border border-2 border-dark-subtle p-0">
+
+        <div id="box-chat" class="bg-white h-100">
+            <div class="box-header d-flex justify-content-between p-2">
+                <div class="d-flex align-items-center justify-content-around">
+                    <img class="profile-img" src="./img/user.png" alt="">
+                    <span class="ms-2">Giorgio</span>
+                </div>
+                <div class="tool-bar d-flex align-items-center justify-content-around">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            <div class="box-header d-flex justify-content-between p-2 notification w-100">
+                <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-bell-slash profile-img bg-white text-center fs-3 notification-bell"></i>
+                    <div>
+                        <div class="notification-text-one ps-2">Ricevi notifiche di nuovi messaggi</div>
+                        <div class="notification-text-two text-decoration-underline ps-2">Attiva notifiche desktop</div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2 bg-gray d-flex align-items-center justify-content-around">
+                <div class="d-flex align-items-baseline justify-content-between w-100 bg-white">
+                    <button class="bg-white"><i class="fa-solid fa-magnifying-glass p-2 border-end border-dark-subtle"></i></button>
+                    <input class="w-100 border-0 ps-2" type="text" placeholder="cerca o inizia una nuova chat">
+                </div>
+            </div>
+            <div v-for="contact in contacts" class="d-flex justify-content-between p-2 border-top border-dark-subtle contacts">
+                <div class="d-flex align-items-center justify-content-around">
+                    <img class="profile-img" src="./img/user.png" alt="">
+                    <span class="ms-2">Giorgio</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="box-message" class="chat h-100 border-start border-dark-subtle border-2 d-flex-column">
+            <div class="box-header d-flex justify-content-between p-2">
+                <div class="d-flex align-items-center justify-content-around">
+                    <img class="profile-img" src="./img/user.png" alt="">
+                    <span class="ms-2">Giorgio</span>
+                </div>
+                <div class="tool-bar d-flex align-items-center justify-content-around">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            <div class="w-75 m-auto mt-5">
+                <div class="d-flex justify-content-end">
+                    <div class="sent-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione officia aliquam  .</div>
+                </div>
+                <div class="recive-message">in nostrum mollitia consequuntur autem illo aliquid perspiciatis molestias ea non deleniti</div>
+                <div class="d-flex justify-content-end">
+                    <div class="sent-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione officia aliquam  .</div>
+                </div>
+            </div>
+            <div class="chat-footer d-flex align-items-center justify-content-around p-2 position-absolute bottom-0 start-70 translate-middle-x">
+                <i class="fa-regular fa-face-smile"></i>
+                <input class="w-75 ps-2" type="text" placeholder="Scrivi un messaggio">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+        </div>
+
     </div>
+        
     <!--java script-->
     <script src="js/script.js"></script>
 </body>
