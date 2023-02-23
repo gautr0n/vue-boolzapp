@@ -18,7 +18,7 @@
         <div id="box-chat" class="bg-white h-100">
             <div class="box-header d-flex justify-content-between p-2">
                 <div class="d-flex align-items-center justify-content-around">
-                    <img class="profile-img" src="./img/user.png" alt="">
+                    <img class="profile-img" src="./img/avatar_1.png" alt="">
                     <span class="ms-2">Giorgio</span>
                 </div>
                 <div class="tool-bar d-flex align-items-center justify-content-around">
@@ -42,10 +42,10 @@
                     <input class="w-100 border-0 ps-2" type="text" placeholder="cerca o inizia una nuova chat">
                 </div>
             </div>
-            <div v-for="contact in contacts" class="d-flex justify-content-between p-2 border-top border-dark-subtle contacts">
+            <div @click="openChat(index, contacts)" v-for="(contact, index) in contacts" class="d-flex justify-content-between p-2 border-top border-dark-subtle contacts">
                 <div class="d-flex align-items-center justify-content-around">
-                    <img class="profile-img" src="./img/user.png" alt="">
-                    <span class="ms-2">Giorgio</span>
+                    <img class="profile-img" :src="contact.avatar" alt="">
+                    <span class="ms-2">{{contact.name}}</span>
                 </div>
             </div>
         </div>
@@ -53,8 +53,8 @@
         <div id="box-message" class="chat h-100 border-start border-dark-subtle border-2 d-flex-column">
             <div class="box-header d-flex justify-content-between p-2">
                 <div class="d-flex align-items-center justify-content-around">
-                    <img class="profile-img" src="./img/user.png" alt="">
-                    <span class="ms-2">Giorgio</span>
+                    <img class="profile-img" src="./img/avatar_1.png" alt="">
+                    <span id="chatName" class="ms-2">Giorgio</span>
                 </div>
                 <div class="tool-bar d-flex align-items-center justify-content-around">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -62,7 +62,7 @@
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
             </div>
-            <div class="w-75 m-auto mt-5">
+            <div id="chatMessage" class="w-75 m-auto mt-5">
                 <div class="d-flex justify-content-end">
                     <div class="sent-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione officia aliquam  .</div>
                 </div>
